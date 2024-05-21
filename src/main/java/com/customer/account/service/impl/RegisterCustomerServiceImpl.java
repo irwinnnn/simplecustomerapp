@@ -89,7 +89,7 @@ public class RegisterCustomerServiceImpl implements RegisterCustomerService {
                 .countryCode(BankCode.getCountryCode(registerRequest.getCountryCode()))
                 .bankCode(BankCode.getBankCode(registerRequest.getCountryCode()))
                 .buildRandom();
-        final IbanAccount ibanAccount = new IbanAccount("Savings", new BigDecimal("200"), "Test", iban.toString());
+        final IbanAccount ibanAccount = new IbanAccount("Savings", new BigDecimal("200"), "EUR", iban.toString());
         customer.setIbanAccount(ibanAccount);
 
         customerRepository.save(customer);
