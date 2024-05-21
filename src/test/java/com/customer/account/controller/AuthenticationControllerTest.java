@@ -98,7 +98,7 @@ public class AuthenticationControllerTest {
         mockMvc.perform(post("/token")
                         .header(HttpHeaders.AUTHORIZATION, basicAuthHeader)
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isBadRequest());
     }
 
     @Test
